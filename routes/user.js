@@ -35,7 +35,7 @@ userRoute
 
       const user = new User(_user);
       const data = await user.save();
-
+      console.log('this is req.body', req.body);
       data.password = undefined;
       res.send(data);
     } catch (err) {
